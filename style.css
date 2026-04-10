@@ -240,6 +240,27 @@ h2 {
     font-size: 1.05rem;
 }
 
+/* Permitir scroll en la parte trasera de la tarjeta y que el texto no se centre cortado */
+.activities-grid .flip-card-back {
+    justify-content: flex-start;
+    text-align: justify; /* Justificar el texto largo para mejor lectura */
+    overflow-y: auto;
+    padding-right: 1.5rem; /* Dejar un poquito espacio para la barra de scroll */
+}
+
+/* Estilizar la barra de scroll de las tarjetas traseras para que sea elegante */
+.activities-grid .flip-card-back::-webkit-scrollbar {
+    width: 6px;
+}
+.activities-grid .flip-card-back::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+.activities-grid .flip-card-back::-webkit-scrollbar-thumb {
+    background: var(--clr-accent);
+    border-radius: 10px;
+}
+
 .icon {
     font-size: 2.5rem;
     margin-bottom: 1rem;
