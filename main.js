@@ -26,10 +26,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Obtenemos el ID de la sección (ej: 'punto-1') y sacamos el número
                 const sectionId = entry.target.id;
                 const index = parseInt(sectionId.replace('punto-', '')) - 1;
-                
+
                 // Quitamos la clase active de todos los puntos y se la ponemos al actual
                 navDots.forEach(dot => dot.classList.remove('active'));
-                if(navDots[index]) {
+                if (navDots[index]) {
                     navDots[index].classList.add('active');
                 }
             }
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
     navDots.forEach((dot, index) => {
         dot.addEventListener('click', () => {
             const targetSection = document.getElementById(`punto-${index + 1}`);
-            if(targetSection) {
+            if (targetSection) {
                 // Hacemos scroll suave hacia esa sección dentro del contenedor
                 targetSection.scrollIntoView({ behavior: 'smooth' });
             }

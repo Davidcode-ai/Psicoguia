@@ -3,12 +3,17 @@
    ============================================================== */
 :root {
     /* Paleta Premium (Verde Claro y Oscuro) */
-    --clr-bg: #f2f7f4;          /* Verde menta clarito (Fondo principal) */
-    --clr-dark: #1a3c2b;        /* Verde pino oscuro (Contraste) */
-    --clr-accent: #a3c9a8;      /* Verde suave (Acentos y luces) */
-    --clr-text-main: #2d3748;   /* Gris oscuro azulado para texto legible */
-    --clr-text-light: #f7faf8;  /* Texto en zonas oscuras */
-    
+    --clr-bg: #f2f7f4;
+    /* Verde menta clarito (Fondo principal) */
+    --clr-dark: #1a3c2b;
+    /* Verde pino oscuro (Contraste) */
+    --clr-accent: #a3c9a8;
+    /* Verde suave (Acentos y luces) */
+    --clr-text-main: #2d3748;
+    /* Gris oscuro azulado para texto legible */
+    --clr-text-light: #f7faf8;
+    /* Texto en zonas oscuras */
+
     /* Tipografía */
     --font-sans: 'Outfit', sans-serif;
     --font-serif: 'Lora', serif;
@@ -30,7 +35,8 @@ body {
     font-family: var(--font-sans);
     color: var(--clr-text-main);
     background-color: var(--clr-bg);
-    overflow: hidden; /* Ocultamos el scroll del body, usaremos el contenedor */
+    overflow: hidden;
+    /* Ocultamos el scroll del body, usaremos el contenedor */
     -webkit-font-smoothing: antialiased;
 }
 
@@ -41,12 +47,16 @@ body {
     height: 100vh;
     width: 100vw;
     overflow-y: scroll;
-    scroll-snap-type: y mandatory; /* Obliga a parar en cada sección */
+    scroll-snap-type: y mandatory;
+    /* Obliga a parar en cada sección */
     scroll-behavior: smooth;
     /* Ocultar barra de scroll para estética App */
-    scrollbar-width: none; 
+    scrollbar-width: none;
 }
-.snap-container::-webkit-scrollbar { display: none; }
+
+.snap-container::-webkit-scrollbar {
+    display: none;
+}
 
 .snap-section {
     height: 100vh;
@@ -63,9 +73,12 @@ body {
 /* ==============================================================
    3. ESTILOS DE SECCIÓN Y TEMAS
    ============================================================== */
-.section-light { background-color: var(--clr-bg); }
-.section-dark { 
-    background-color: var(--clr-dark); 
+.section-light {
+    background-color: var(--clr-bg);
+}
+
+.section-dark {
+    background-color: var(--clr-dark);
     color: var(--clr-text-light);
 }
 
@@ -82,13 +95,35 @@ body {
     height: 100%;
 }
 
-.center-focus { align-items: center; text-align: center; }
+.center-focus {
+    align-items: center;
+    text-align: center;
+}
 
 /* Tipografía Avanzada */
-h1, h2, h3 { font-family: var(--font-serif); font-weight: 400; }
-h1 { font-size: clamp(4rem, 10vw, 8rem); letter-spacing: -0.03em; margin: 1rem 0; color: var(--clr-dark); }
-h1 em { font-style: italic; color: var(--clr-accent); }
-h2 { font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 2rem; }
+h1,
+h2,
+h3 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+}
+
+h1 {
+    font-size: clamp(4rem, 10vw, 8rem);
+    letter-spacing: -0.03em;
+    margin: 1rem 0;
+    color: var(--clr-dark);
+}
+
+h1 em {
+    font-style: italic;
+    color: var(--clr-accent);
+}
+
+h2 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: 2rem;
+}
 
 .numeral {
     font-family: var(--font-sans);
@@ -100,9 +135,23 @@ h2 { font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 2rem; }
     margin-bottom: 0.5rem;
 }
 
-.subtitle { font-size: clamp(1.2rem, 2vw, 1.5rem); max-width: 600px; opacity: 0.8; font-weight: 300; }
-.lead-text { font-size: 1.5rem; line-height: 1.6; }
-.secondary-text { font-size: 1.1rem; opacity: 0.7; font-style: italic; }
+.subtitle {
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    max-width: 600px;
+    opacity: 0.8;
+    font-weight: 300;
+}
+
+.lead-text {
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+.secondary-text {
+    font-size: 1.1rem;
+    opacity: 0.7;
+    font-style: italic;
+}
 
 /* ==============================================================
    4. COMPONENTES PREMIUM (Glassmorphism & Bento Grid)
@@ -118,6 +167,7 @@ h2 { font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 2rem; }
     padding: 3rem;
     box-shadow: var(--shadow-soft);
 }
+
 .section-dark .glass-box {
     background: rgba(255, 255, 255, 0.05);
     border-color: rgba(255, 255, 255, 0.1);
@@ -131,6 +181,7 @@ h2 { font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 2rem; }
     gap: 1.5rem;
     width: 100%;
 }
+
 .bento-item {
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
@@ -138,20 +189,31 @@ h2 { font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 2rem; }
     border-radius: 24px;
     transition: transform 0.3s ease;
 }
+
 .section-dark .bento-item {
     background: rgba(255, 255, 255, 0.05);
     border-color: rgba(255, 255, 255, 0.1);
 }
-.bento-item:hover { transform: translateY(-5px); }
-.bento-wide { grid-column: span 2; }
-.icon { font-size: 2.5rem; margin-bottom: 1rem; }
+
+.bento-item:hover {
+    transform: translateY(-5px);
+}
+
+.bento-wide {
+    grid-column: span 2;
+}
+
+.icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
 
 /* Luz Ambiental Hero */
 .ambient-light {
     position: absolute;
     width: 80vw;
     height: 80vh;
-    background: radial-gradient(circle, var(--clr-accent) 0%, rgba(255,255,255,0) 60%);
+    background: radial-gradient(circle, var(--clr-accent) 0%, rgba(255, 255, 255, 0) 60%);
     opacity: 0.3;
     top: -10%;
     right: -10%;
@@ -171,7 +233,13 @@ h2 { font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 2rem; }
 }
 
 /* Split Layout */
-.split { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+.split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
 .logo-frame {
     aspect-ratio: 1;
     background: linear-gradient(135deg, #fff, #e4eee7);
@@ -195,6 +263,7 @@ h2 { font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 2rem; }
     text-transform: uppercase;
     letter-spacing: 2px;
 }
+
 .line-down {
     width: 2px;
     height: 60px;
@@ -202,35 +271,112 @@ h2 { font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 2rem; }
     position: relative;
     overflow: hidden;
 }
+
 .line-down::after {
-    content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 50%; background: var(--clr-bg); animation: drop 2s infinite;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: var(--clr-bg);
+    animation: drop 2s infinite;
 }
-@keyframes drop { 0% { transform: translateY(-100%); } 100% { transform: translateY(200%); } }
+
+@keyframes drop {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(200%);
+    }
+}
 
 /* Indicador lateral */
 .progress-nav {
-    position: fixed; right: 2rem; top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; gap: 1rem; z-index: 50;
+    position: fixed;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    z-index: 50;
 }
-.dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(0,0,0,0.2); transition: all 0.3s; }
-.dot.active { background: var(--clr-accent); transform: scale(1.5); }
-.section-dark ~ .progress-nav .dot { background: rgba(255,255,255,0.3); } /* Cambio color según fondo */
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+}
+
+.dot.active {
+    background: var(--clr-accent);
+    transform: scale(1.5);
+}
+
+.section-dark~.progress-nav .dot {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Cambio color según fondo */
 
 /* ==============================================================
    5. CLASES DE ANIMACIÓN (Controladas por JS)
    ============================================================== */
-.fade-in-up { opacity: 0; transform: translateY(40px); transition: opacity var(--transition), transform var(--transition); transition-delay: var(--delay, 0s); }
-.fade-in-right { opacity: 0; transform: translateX(-40px); transition: all var(--transition); }
-.fade-in-left { opacity: 0; transform: translateX(40px); transition: all var(--transition); }
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity var(--transition), transform var(--transition);
+    transition-delay: var(--delay, 0s);
+}
 
-.is-visible.fade-in-up, .is-visible.fade-in-right, .is-visible.fade-in-left, .is-visible .fade-in-up, .is-visible .fade-in-right, .is-visible .fade-in-left {
-    opacity: 1; transform: translate(0);
+.fade-in-right {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: all var(--transition);
+}
+
+.fade-in-left {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: all var(--transition);
+}
+
+.is-visible.fade-in-up,
+.is-visible.fade-in-right,
+.is-visible.fade-in-left,
+.is-visible .fade-in-up,
+.is-visible .fade-in-right,
+.is-visible .fade-in-left {
+    opacity: 1;
+    transform: translate(0);
 }
 
 /* Responsivo */
 @media (max-width: 768px) {
-    .bento-grid { grid-template-columns: 1fr; }
-    .bento-wide { grid-column: span 1; }
-    .split { grid-template-columns: 1fr; text-align: center; gap: 2rem; }
-    .progress-nav { display: none; }
-    h1 { font-size: 3.5rem; }
+    .bento-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bento-wide {
+        grid-column: span 1;
+    }
+
+    .split {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .progress-nav {
+        display: none;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
 }
