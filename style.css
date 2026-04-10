@@ -149,6 +149,11 @@ h2 {
 .lead-text {
     font-size: 1.5rem;
     line-height: 1.6;
+    text-align: justify;
+}
+
+.t-just {
+    text-align: justify;
 }
 
 .secondary-text {
