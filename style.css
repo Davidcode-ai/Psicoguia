@@ -212,6 +212,34 @@ h2 {
     grid-column: span 2;
 }
 
+/* Grid especial para 8 Actividades */
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem; /* Aumentado para rellenar ancho */
+    width: 100%;
+    padding: 1rem 0;
+}
+.activities-grid .flip-card {
+    min-height: 240px; /* Altura mínima impuesta para que sean mucho más grandes */
+}
+.activities-grid .glass-box {
+    padding: 2rem; /* Más espacio interno */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Texto perfectamente centrado */
+    align-items: center;
+    text-align: center;
+}
+.activities-grid h3 {
+    font-size: 1.4rem; /* Letra más grande */
+    margin-bottom: 0.8rem;
+}
+.activities-grid p {
+    font-size: 1.05rem;
+}
+
 .icon {
     font-size: 2.5rem;
     margin-bottom: 1rem;
