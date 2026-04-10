@@ -95,6 +95,10 @@ body {
     height: 100%;
 }
 
+.t-grandes {
+    font-size: 25px;
+}
+
 .center-focus {
     align-items: center;
     text-align: center;
